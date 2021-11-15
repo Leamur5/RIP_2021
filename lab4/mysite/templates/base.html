@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+  <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    Привет!
+    Сегодня {{ data.current_date }}
+    <br>Здесь ты можешь узнать о некоторых породах кошек
+    {% block content %}{% endblock %}
+</body>
+</html>
