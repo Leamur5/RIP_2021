@@ -1,0 +1,24 @@
+{% load static %}
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark p-3">
+    <ul class="navbar-nav nav-tabs ml-auto">
+        <li class="nav-item">
+            <a href="{% url 'main' %}" class="nav-link">Main Page</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'read_driver' %}" class="nav-link">All drivers</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'create_driver' %}" class="nav-link">Create driver</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'read_autopark' %}" class="nav-link">All autoparks</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'create_autopark' %}" class="nav-link">Create autopark</a
+      >
+    </li>
+    <li class="nav-item">
+      <a href="{% url 'report' %}" class="nav-link">Report</a>
+        </li>
+    </ul>
+</nav>

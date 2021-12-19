@@ -5,7 +5,12 @@
 {% block content %}
 <ul>
     {% for cat in data.cats %}
-        <li><a href="{% url 'cat_url' cat.name %}">{{ cat.name }}</a> </li>
+        <li style="color: #800080; font-size:20px">
+            <a href="{% url 'cat_url' cat.name %}" style="text-decoration: none;
+  color: #800080;
+  border-bottom: 1px solid;
+  border-bottom-color: rgba(15, 122, 252, 0.2);">{{ cat.name }} </a>
+        </li>
     {% empty %}
         <li>Список пуст</li>
     {% endfor %}

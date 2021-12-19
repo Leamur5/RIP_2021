@@ -1,0 +1,18 @@
+<div class="mb-3">
+    <label for="driverName" class="form-label">Driver Name</label>
+    <input type="text" name="name" value="{{ driver.name }}" required="required" class="form-control" id="driverName" />
+</div>
+
+<div class="mb-3">
+    <label for="driverSalary" class="form-label">Driver Salary</label>
+    <input type="number" min="0" name="salary" value="{{ driver.salary }}" required="required" class="form-control" id="driverSalary" />
+</div>
+
+<div class="mb-3">
+    <label for="driverAutopark" class="form-label">Select Autopark</label>
+    <select name="autopark" class="form-select" aria-label="Default select example" id="driverAutopark">
+        {% for autopark in autoparks %}
+        <option value="{{ autopark.pk }}">{{ autopark.name }}</option>
+        {% endfor %}
+    </select>
+</div>

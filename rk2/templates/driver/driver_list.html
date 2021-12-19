@@ -1,0 +1,9 @@
+{% extends 'inc/base.html' %} {% load static %} {% block content %}
+<div class="container">
+    <h1 class="text-center mt-4">All Drivers</h1>
+</div>
+<!-- Page Content -->
+<div class="d-flex flex-column">
+    {% for driver in drivers %} {% include 'driver/driver_card.html' with driver=driver %} {% endfor %}
+</div>
+{% endblock content %}
