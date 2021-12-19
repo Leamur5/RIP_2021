@@ -3,15 +3,21 @@
 {% block title %}Порода: {{ data.name }}{% endblock %}
 
 {% block content %}
-    <div>{{ data.name }} -
+    <div style="text-align: center; margin:15px">{{ data.name }} -
         {% for cat in data.cats %}
             {% if cat.name == data.name %}
                 {{ cat.desc }}
                 <br>
-                 <img src="{% static cat.img %}"  alt="{% static cat.img %}">
+                 <img src="{% static cat.img %}"  alt="{% static cat.img %}" class="img-fluid" style="width: 40%;">
 
             {% endif %}
         {% endfor %}
     </div>
-    <br><a href="{% url 'main' %}">На главную</a> </br>
+    <br>
+    <div style="color: #800080; font-size:20px; margin:15px">
+        <a href="{% url 'main' %}" style="text-decoration: none;
+  color: #800080;
+  border-bottom: 1px solid;
+  border-bottom-color: rgba(15, 122, 252, 0.2);">На главную</a>
+    </div>
 {% endblock %}

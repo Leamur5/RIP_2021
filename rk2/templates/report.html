@@ -1,0 +1,22 @@
+{% extends 'inc/base.html' %} {% load static %} {% block content %}
+<div class="container">
+    <h1 class="text-center mt-4">Report Page</h1>
+</div>
+<!-- Page Content -->
+<div>
+    <h1>Drivers with name ends with 'ов'</h1>
+    {% for driver in found_drivers %} {% include 'driver/driver_card.html' with driver=driver %} {% endfor %}
+</div>
+
+<div>
+    <h1>Average salary</h1>
+    <div class="d-flex flex-wrap">
+        {% for avg_salary in average_salaries %}
+        <div class="d-flex flex-column align-center">
+            <h3 class="text-center">Average salary {{ avg_salary.salary }}</h3>
+            {% include 'autopark/autopark_card.html' with autopark=avg_salary.autopark %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,9 @@
+{% extends 'inc/base.html' %} {% load static %} {% block content %}
+<div class="container">
+    <h1 class="text-center mt-4">All Autoparks</h1>
+</div>
+<!-- Page Content -->
+<div class="d-flex flex-wrap">
+    {% for autopark in autoparks %} {% include 'autopark/autopark_card.html' with autopark=autopark %} {% endfor %}
+</div>
+{% endblock content %}
